@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Joke Teller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the AI Joke Teller!</h1>
+        <p id="joke">Press the button to hear a joke!</p>
+        <button onclick="tellJoke()">Get a Joke</button>
+    </div>
+[InternetShortcut]
+URL=https://magiceden.io/
+
+    <script>
+        async function tellJoke() {
+            const jokes = [
+                "Why don't scientists trust atoms? Because they make up everything!",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "Why do cows have hooves instead of feet? Because they lactose!",
+                "Why can't you hear a pterodactyl go to the bathroom? Because the 'P' is silent!",
+                "What do you call fake spaghetti? An impasta!"
+            ];
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            document.getElementById('joke').innerText = jokes[randomIndex];
+        }
+    </script>
+</body>
+</html>
